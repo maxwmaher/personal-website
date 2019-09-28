@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { ThemeProvider } from '@material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
+import theme from './theme';
+import Header from './Header';
+import Container from '@material-ui/core/Container';
+import Typography from '@material-ui/core/Typography';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
+import 'typeface-roboto';
+
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  card: {
+    textAlign: 'center',
+    background: '#494A49',
+    color: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  main: {
+    color: '#fff'
+  }
+});
 
 class App extends Component {
+
   render() {
+
+    const { classes } = this.props
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Header />
+        <div className={classes.main}>
+          Hello, welcome to my website!
+        </div>
+      </ThemeProvider>
     );
   }
 }
 
-export default App;
+export default (withStyles(styles)(App));
