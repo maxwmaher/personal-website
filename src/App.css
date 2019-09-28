@@ -31,3 +31,30 @@
     transform: rotate(360deg);
   }
 }
+
+.img-wrapper {  
+
+  overflow: hidden; 
+
+}
+
+.inner-img {
+  transition: 0.5s;
+}
+
+.inner-img:hover {
+  transform: scale(1.03);
+}
+
+/* Other styling elements, that are not necessary for the example */
+
+.img-wrapper {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+img {
+  max-width:90%;
+    height:auto;
+    border-radius: 6%
+}
