@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid } from "@material-ui/core";
-import Container from '@material-ui/core/Container';
+import { FaLinkedin } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const styles = theme => ({
     root: {
@@ -13,13 +15,21 @@ const styles = theme => ({
         height: 70,
         color: 'black',
         textAlign: 'center',
-        fontSize: 28,
+        fontSize: 34,
         verticalAlign: 'center',
         padding: theme.spacing(3, 2),
         display: "flex",
         flexDirection: "column",
         justifyContent: "center"
-    }
+    },
+    fab: {
+        margin: theme.spacing.unit * 2,
+    },
+    absolute: {
+        position: 'absolute',
+        bottom: theme.spacing.unit * 2,
+        right: theme.spacing.unit * 3,
+    },
 });
 
 class Header extends Component {
@@ -36,8 +46,17 @@ class Header extends Component {
                     <Grid item sm={8}>
                         Max Maher
                     </Grid>
-                    <Grid item sm={2}>
-                        <GoMarkGithub/>
+                    <Grid item sm={2} style={{textAlign: 'right'}}>
+                        <Tooltip title="Github">
+                            <IconButton aria-label="Github" target="_blank" href="https://github.com/maxwmaher">
+                                <GoMarkGithub style={{color: 'black'}}/>
+                            </IconButton>
+                        </Tooltip>
+                        <Tooltip title="LinkedIn">
+                            <IconButton aria-label="LinkedIn" target="_blank" href="https://www.linkedin.com/in/max-maher/">
+                                <FaLinkedin style={{ color: 'black' }} />
+                            </IconButton>
+                        </Tooltip>
                     </Grid>
                 </Grid>
             </header>
