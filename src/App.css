@@ -60,3 +60,12 @@
   transform: scale(1.015);
   transition: 0.5s;
 }
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+	left: 0px;
+  z-index: 1500;
+  margin-bottom: 100;
+}

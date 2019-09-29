@@ -94,9 +94,11 @@ class App extends Component {
     return (
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Header />
+        <div className="header">
+          <Header position="fixed" />
+        </div>
         <div className={classes.main}>
-          <Grid container spacing={2} justify="center" style={{ marginTop: 50 }}>
+          <Grid container spacing={2} justify="center" style={{ marginTop: 100 }}>
 
             <Grid item sm={1}>
             </Grid>
@@ -113,7 +115,7 @@ class App extends Component {
               <span className={classes.bodySubText}><i>{resumeLeadIn[this.state.randomNumber]}</i></span>
               <br /><br />
               <Button className={classes.learnMore} aria-label="Resume" target="_blank" href="https://www.docdroid.net/nB07ZBQ/resume-upload-to-website.pdf">
-                Learn More<DoubleArrow/>
+                Learn More<DoubleArrow />
               </Button>
             </Grid>
             <Grid item sm={1}>
@@ -121,11 +123,11 @@ class App extends Component {
           </Grid>
 
           <Grid container spacing={4} justify="center" style={{ marginTop: 60 }}>
-            
+
             <Grid item sm={1}>
             </Grid>
-            <Grid item sm={10} style={{textAlign: "right"}}>
-              <span className={classes.portfolio}>Portfolio<Collections style={{marginLeft: 6}}/></span>
+            <Grid item sm={10} style={{ textAlign: "right" }}>
+              <span className={classes.portfolio}>Portfolio<Collections style={{ marginLeft: 6 }} /></span>
             </Grid>
             <Grid item sm={1}>
             </Grid>
@@ -134,32 +136,32 @@ class App extends Component {
             </Grid>
             <Grid item sm={5}>
               <Card className={classes.card}>
-                <CardContent style={{height: 321}}>
+                <CardContent style={{ height: 321 }}>
                   <span className={classes.title}>Trivia Team Management System</span>
-                  <br/>
+                  <br />
                   <span className={classes.projectName}>Trivia Weekend</span>
                   <br /><br />
                   <span className={classes.projectDescription}>Managing a trivia team may not sound like hard work, but what if you're playing in a 50-hour contest, and team members can jump in from anywhere?  My unique solution allows team captains to enter questions, answers, and scores, while team players can view exactly what they need to work on next.</span>
-                  </CardContent>
-                  <CardActions className={classes.projectLearnMore}>
-                    {/* Display button to navigate into movie details page */}
-                  <Button className={classes.learnMore} aria-label="Trivia Weekend" target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ marginLeft: "auto", marginRight: 0}}>
-                      Open Project<OpenInNew style={{marginLeft: 3}}/>
-              </Button>
-                  </CardActions>
+                </CardContent>
+                <CardActions className={classes.projectLearnMore}>
+                  {/* Display button to navigate into movie details page */}
+                  <Button className={classes.learnMore} aria-label="Trivia Weekend" target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ marginLeft: "auto", marginRight: 0 }}>
+                    Open Project<OpenInNew style={{ marginLeft: 3 }} />
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
             <Grid item sm={5}>
               <Card>
-                <Button target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{padding:"0", border: "none", background: "none"}}>
-                <CardMedia
-                  className="projectImage"
-                  component="img"
-                  alt="Trivia Weekend"
-                  image="https://i.imgur.com/WV7Hdc5.png"
-                  title="Trivia Weekend"
-                  style={{height: 375}}
-                />
+                <Button target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ padding: "0", border: "none", background: "none" }}>
+                  <CardMedia
+                    className="projectImage"
+                    component="img"
+                    alt="Trivia Weekend"
+                    image="https://i.imgur.com/WV7Hdc5.png"
+                    title="Trivia Weekend"
+                    style={{ height: 375 }}
+                  />
                 </Button>
               </Card>
             </Grid>
