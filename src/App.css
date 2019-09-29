@@ -40,6 +40,9 @@
 
 .inner-img {
   transition: 0.5s;
+  max-width:90%;
+    height:auto;
+    border-radius: 6%
 }
 
 .inner-img:hover {
@@ -53,8 +56,7 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width:90%;
-    height:auto;
-    border-radius: 6%
+.projectImage:hover {
+  transform: scale(1.015);
+  transition: 0.5s;
 }

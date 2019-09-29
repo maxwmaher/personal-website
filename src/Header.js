@@ -41,9 +41,7 @@ class Header extends Component {
         return (
             <header className={classes.header}>
                 <Grid container spacing={2} justify="center">
-                    <Grid item sm={2}>
-                    </Grid>
-                    <Grid item sm={8}>
+                    <Grid item sm={10} style={{textAlign: "left", paddingLeft: 30}}>
                         Max Maher
                     </Grid>
                     <Grid item sm={2} style={{textAlign: 'right'}}>

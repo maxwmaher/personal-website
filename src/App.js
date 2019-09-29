@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { withStyles } from '@material-ui/core/styles';
-import { Button, Grid } from "@material-ui/core";
+import { Button, Card, CardActions, CardContent, CardMedia, Grid } from "@material-ui/core";
+import { DoubleArrow, OpenInNew } from '@material-ui/icons';
 import theme from './theme';
 import Header from './Header';
 import Container from '@material-ui/core/Container';
@@ -16,10 +17,11 @@ const styles = theme => ({
   },
   card: {
     textAlign: 'center',
-    background: '#494A49',
+    background: '#696565',
     color: 'white',
     alignItems: 'center',
     justifyContent: 'center',
+    height: 375
   },
   main: {
     color: '#fff'
@@ -35,7 +37,21 @@ const styles = theme => ({
   },
   learnMore: {
     color: "#1CF7E9"
-  }
+  },
+  title: {
+    fontSize: 36
+  },
+  projectName: {
+    fontSize: 24,
+    color: "#1CF7E9"
+  },
+  projectDescription: {
+    fontSize: 18
+  },
+  // projectLearnMore: {
+  //   marginLeft: "auto",
+  //   marginRight: 0
+  // }
 });
 
 class App extends Component {
@@ -50,7 +66,7 @@ class App extends Component {
 
   setRandomIndex() {
     let randomIndex = 0;
-    randomIndex = Math.floor(Math.random() * 4) + 1  
+    randomIndex = Math.floor(Math.random() * 4) + 1
     this.setState({
       randomNumber: randomIndex
     })
@@ -59,15 +75,15 @@ class App extends Component {
   render() {
 
     const { classes } = this.props
-    
-    const professionalFacts = ['Empty Fact', 
+
+    const professionalFacts = ['Empty Fact',
       'Former senior consultant with nearly a decade of tenure in the software industry.',
       `Fluent in React, Redux, Sagas, Material-UI, and that's just scratching the surface.`,
       'Experience working alongside developers, project managers, and product owners.',
       `Throughout all of my professional roles, I've made software easier to use.`]
 
     const resumeLeadIn = ['Empty Message',
-      'Learn how I contributed to the growth of a rising K-12 administrative software company.',
+      `Learn how I contributed to a rising K-12 administrative software company's success.`,
       `My list of technical skills is only growing.  See them all, and let's keep adding to it.`,
       `There isn't a department within a software company that I haven't worked with.`,
       `Making software as useable as it is functional has always been my focus.`]
@@ -86,17 +102,63 @@ class App extends Component {
               </div>
             </Grid>
             <Grid item sm={7} style={{ textAlign: "center" }}>
-              <span className={classes.introText}>Full Stack Software Developer</span>
+              <span className={classes.introText}>Software Developer, Full Stack</span>
               <br /><br />
               <span className={classes.bodyText}>{professionalFacts[this.state.randomNumber]}</span>
-              <br/><br/>
+              <br /><br />
               <span className={classes.bodySubText}><i>{resumeLeadIn[this.state.randomNumber]}</i></span>
-              <br/><br/>
+              <br /><br />
               <Button className={classes.learnMore} aria-label="Resume" target="_blank" href="https://www.docdroid.net/nB07ZBQ/resume-upload-to-website.pdf">
-                Learn More
+                Learn More<DoubleArrow/>
               </Button>
             </Grid>
             <Grid item sm={1}>
+            </Grid>
+          </Grid>
+          <Grid container spacing={2} justify="center" style={{ marginTop: 60 }}>
+            <Grid item sm={1}>
+
+            </Grid>
+            <Grid item sm={5}>
+              <Card className={classes.card}>
+                <CardContent style={{height: 321}}>
+              
+                  <span className={classes.title}>Trivia Team Management System</span>
+                  <br/>
+                  <span className={classes.projectName}>Trivia Weekend</span>
+                  <br /><br />
+                  <span className={classes.projectDescription}>Managing a trivia team may not sound like hard work, but what if you're playing in a 50-hour contest, and team members can jump in from anywhere?  My unique solution allows team captains to enter questions, answers, and scores, while team players can view exactly what they need to work on next.</span>
+                  </CardContent>
+                  <CardActions className={classes.projectLearnMore}>
+                    {/* Display button to navigate into movie details page */}
+                  <Button className={classes.learnMore} aria-label="Trivia Weekend" target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ marginLeft: "auto", marginRight: 0}}>
+                      Open Project<OpenInNew style={{marginLeft: 3}}/>
+              </Button>
+                  </CardActions>
+              
+
+              </Card>
+            </Grid>
+            <Grid item sm={5}>
+              <Card>
+                <Button target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{padding:"0", border: "none", background: "none"}}>
+                <CardMedia
+                  className="projectImage"
+                  component="img"
+                  alt="Trivia Weekend"
+                  image="https://i.imgur.com/jdxZai8.png"
+                  title="Trivia Weekend"
+                  style={{height: 375}}
+                  target="_blank"
+                  href="https://github.com/maxwmaher/trivia-weekend"
+                />
+                </Button>
+
+
+              </Card>
+            </Grid>
+            <Grid item sm={1}>
+
             </Grid>
           </Grid>
         </div>
