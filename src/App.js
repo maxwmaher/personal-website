@@ -225,6 +225,42 @@ class App extends Component {
             <Grid item sm={1}>
             </Grid>
 
+            <Grid item sm={1}>
+            </Grid>
+            <Grid item sm={5}>
+              <Card>
+                <Button target="_blank" href="https://github.com/maxwmaher/jquery-server-side-calculator" style={{ padding: "0", border: "none", background: "none" }}>
+                  <CardMedia
+                    className="projectImage"
+                    component="img"
+                    alt="Server Side Calculator"
+                    image="https://i.imgur.com/TNIznsz.png"
+                    title="Server Side Calculator"
+                    style={{ height: 375 }}
+                  />
+                </Button>
+              </Card>
+            </Grid>
+            <Grid item sm={5}>
+              <Card className={classes.card}>
+                <CardContent style={{ height: 321 }}>
+                  <span className={classes.title}>Server Side Calculator</span>
+                  <br />
+                  <span className={classes.projectName}>Built from the ground up</span>
+                  <br /><br />
+                  <span className={classes.projectDescription}>Utilizing JavaScript, jQuery, and Express, I built a calculator from scratch that adds, subtracts, multiplies, and divides any two numbers.  The value is stored in a server, and a history of recent computations displays for the user.</span>
+                </CardContent>
+                <CardActions className={classes.projectLearnMore}>
+                  {/* Display button to navigate into movie details page */}
+                  <Button className={classes.learnMore} aria-label="Server Side Calculator" target="_blank" href="https://github.com/maxwmaher/jquery-server-side-calculator" style={{ marginLeft: "auto", marginRight: 0 }}>
+                    Open Project<OpenInNew style={{ marginLeft: 3 }} />
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item sm={1}>
+            </Grid>
+
           </Grid>
         </div>
       </ThemeProvider>
