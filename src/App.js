@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import { withStyles } from '@material-ui/core/styles';
 import { Button, Card, CardActions, CardContent, CardMedia, Grid } from "@material-ui/core";
-import { DoubleArrow, OpenInNew } from '@material-ui/icons';
+import { Collections, DoubleArrow, OpenInNew } from '@material-ui/icons';
 import theme from './theme';
 import Header from './Header';
 import Container from '@material-ui/core/Container';
@@ -37,6 +37,9 @@ const styles = theme => ({
   },
   learnMore: {
     color: "#1CF7E9"
+  },
+  portfolio: {
+    fontSize: 30
   },
   title: {
     fontSize: 36
@@ -94,6 +97,7 @@ class App extends Component {
         <Header />
         <div className={classes.main}>
           <Grid container spacing={2} justify="center" style={{ marginTop: 50 }}>
+
             <Grid item sm={1}>
             </Grid>
             <Grid item sm={3} style={{ textAlign: "center" }}>
@@ -115,8 +119,17 @@ class App extends Component {
             <Grid item sm={1}>
             </Grid>
           </Grid>
+
           <Grid container spacing={4} justify="center" style={{ marginTop: 60 }}>
             
+            <Grid item sm={1}>
+            </Grid>
+            <Grid item sm={10} style={{textAlign: "right"}}>
+              <span className={classes.portfolio}>Portfolio<Collections style={{marginLeft: 6}}/></span>
+            </Grid>
+            <Grid item sm={1}>
+            </Grid>
+
             <Grid item sm={1}>
             </Grid>
             <Grid item sm={5}>

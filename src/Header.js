@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import { Grid } from "@material-ui/core";
 import { FaLinkedin } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
+import { IoIosMail } from "react-icons/io";
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 
@@ -45,6 +46,11 @@ class Header extends Component {
                         Max Maher
                     </Grid>
                     <Grid item sm={2} style={{textAlign: 'right'}}>
+                        <Tooltip title="Email">
+                            <IconButton aria-label="Email" target="_blank" href="mailto:maxwmaher@gmail.com?subject=Inquiry from Max Maher's Portfolio&body=Hello Max,">
+                                <IoIosMail style={{ color: 'black' }} />
+                            </IconButton>
+                        </Tooltip>
                         <Tooltip title="Github">
                             <IconButton aria-label="Github" target="_blank" href="https://github.com/maxwmaher">
                                 <GoMarkGithub style={{color: 'black'}}/>
