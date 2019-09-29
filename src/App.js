@@ -194,15 +194,15 @@ class App extends Component {
             <Grid item sm={5}>
               <Card className={classes.card}>
                 <CardContent style={{ height: 321 }}>
-                  <span className={classes.title}>Trivia Team Management System</span>
+                  <span className={classes.title}>Gallery of My Life</span>
                   <br />
-                  <span className={classes.projectName}>Trivia Weekend</span>
+                  <span className={classes.projectName}>(this) awesome life</span>
                   <br /><br />
-                  <span className={classes.projectDescription}>Managing a trivia team may not sound like hard work, but what if you're playing in a 50-hour contest, and team members can jump in from anywhere?  My unique solution allows team captains to enter questions, answers, and scores, while team players can view exactly what they need to work on next.</span>
+                  <span className={classes.projectDescription}>In my first foray into React, I developed a gallery of my life that invites user interaction.  Visitors to the application can insert images, like photos, and delete.  To get more information about a photo, users can simply hover over an image.</span>
                 </CardContent>
                 <CardActions className={classes.projectLearnMore}>
                   {/* Display button to navigate into movie details page */}
-                  <Button className={classes.learnMore} aria-label="Trivia Weekend" target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ marginLeft: "auto", marginRight: 0 }}>
+                  <Button className={classes.learnMore} aria-label="Gallery of My Life" target="_blank" href="https://github.com/maxwmaher/react-gallery" style={{ marginLeft: "auto", marginRight: 0 }}>
                     Open Project<OpenInNew style={{ marginLeft: 3 }} />
                   </Button>
                 </CardActions>
@@ -210,13 +210,13 @@ class App extends Component {
             </Grid>
             <Grid item sm={5}>
               <Card>
-                <Button target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ padding: "0", border: "none", background: "none" }}>
+                <Button target="_blank" href="https://github.com/maxwmaher/react-gallery" style={{ padding: "0", border: "none", background: "none" }}>
                   <CardMedia
                     className="projectImage"
                     component="img"
-                    alt="Trivia Weekend"
-                    image="https://i.imgur.com/WV7Hdc5.png"
-                    title="Trivia Weekend"
+                    alt="Gallery of My Life"
+                    image="https://i.imgur.com/qhZY280.jpg"
+                    title="Gallery of My Life"
                     style={{ height: 375 }}
                   />
                 </Button>
