@@ -263,7 +263,7 @@ class App extends Component {
                   <br />
                   <span className={classes.projectName}>Built from the ground up</span>
                   <br /><br />
-                  <span className={classes.projectDescription}>Utilizing JavaScript, jQuery, and Express, I built a calculator from scratch that adds, subtracts, multiplies, and divides any two numbers.  The value is stored in a server, and a history of recent computations displays for the user.</span>
+                  <span className={classes.projectDescription}>Utilizing JavaScript, jQuery, and Express, I built a calculator from scratch that adds, subtracts, multiplies, and divides any two numbers.  The value is stored on a server, and a history of recent computations displays for the user.</span>
                 </CardContent>
                 <CardActions className={classes.projectLearnMore}>
                   {/* Display button to navigate into movie details page */}
