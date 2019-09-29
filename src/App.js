@@ -115,14 +115,13 @@ class App extends Component {
             <Grid item sm={1}>
             </Grid>
           </Grid>
-          <Grid container spacing={2} justify="center" style={{ marginTop: 60 }}>
+          <Grid container spacing={4} justify="center" style={{ marginTop: 60 }}>
+            
             <Grid item sm={1}>
-
             </Grid>
             <Grid item sm={5}>
               <Card className={classes.card}>
                 <CardContent style={{height: 321}}>
-              
                   <span className={classes.title}>Trivia Team Management System</span>
                   <br/>
                   <span className={classes.projectName}>Trivia Weekend</span>
@@ -135,8 +134,6 @@ class App extends Component {
                       Open Project<OpenInNew style={{marginLeft: 3}}/>
               </Button>
                   </CardActions>
-              
-
               </Card>
             </Grid>
             <Grid item sm={5}>
@@ -146,20 +143,88 @@ class App extends Component {
                   className="projectImage"
                   component="img"
                   alt="Trivia Weekend"
-                  image="https://i.imgur.com/jdxZai8.png"
+                  image="https://i.imgur.com/WV7Hdc5.png"
                   title="Trivia Weekend"
                   style={{height: 375}}
-                  target="_blank"
-                  href="https://github.com/maxwmaher/trivia-weekend"
                 />
                 </Button>
-
-
               </Card>
             </Grid>
             <Grid item sm={1}>
-
             </Grid>
+
+            <Grid item sm={1}>
+            </Grid>
+            <Grid item sm={5}>
+              <Card>
+                <Button target="_blank" href="https://github.com/maxwmaher/movie-gallery" style={{ padding: "0", border: "none", background: "none" }}>
+                  <CardMedia
+                    className="projectImage"
+                    component="img"
+                    alt="Movies and Genres"
+                    image="https://i.imgur.com/eg5wrzC.png"
+                    title="Movies and Genres"
+                    style={{ height: 375 }}
+                  />
+                </Button>
+              </Card>
+            </Grid>
+            <Grid item sm={5}>
+              <Card className={classes.card}>
+                <CardContent style={{ height: 321 }}>
+                  <span className={classes.title}>Interactive Film Library</span>
+                  <br />
+                  <span className={classes.projectName}>Movies and Genres</span>
+                  <br /><br />
+                  <span className={classes.projectDescription}>Using React and Redux, I designed a gallery of a person's favorite movies.  Using SQL junction tables, the application provides details on the many genres that could be attached to different movies and grants the ability to edit details about each film.</span>
+                </CardContent>
+                <CardActions className={classes.projectLearnMore}>
+                  {/* Display button to navigate into movie details page */}
+                  <Button className={classes.learnMore} aria-label="Movies and Genres" target="_blank" href="https://github.com/maxwmaher/movie-gallery" style={{ marginLeft: "auto", marginRight: 0 }}>
+                    Open Project<OpenInNew style={{ marginLeft: 3 }} />
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item sm={1}>
+            </Grid>
+
+            <Grid item sm={1}>
+            </Grid>
+            <Grid item sm={5}>
+              <Card className={classes.card}>
+                <CardContent style={{ height: 321 }}>
+                  <span className={classes.title}>Trivia Team Management System</span>
+                  <br />
+                  <span className={classes.projectName}>Trivia Weekend</span>
+                  <br /><br />
+                  <span className={classes.projectDescription}>Managing a trivia team may not sound like hard work, but what if you're playing in a 50-hour contest, and team members can jump in from anywhere?  My unique solution allows team captains to enter questions, answers, and scores, while team players can view exactly what they need to work on next.</span>
+                </CardContent>
+                <CardActions className={classes.projectLearnMore}>
+                  {/* Display button to navigate into movie details page */}
+                  <Button className={classes.learnMore} aria-label="Trivia Weekend" target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ marginLeft: "auto", marginRight: 0 }}>
+                    Open Project<OpenInNew style={{ marginLeft: 3 }} />
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+            <Grid item sm={5}>
+              <Card>
+                <Button target="_blank" href="https://github.com/maxwmaher/trivia-weekend" style={{ padding: "0", border: "none", background: "none" }}>
+                  <CardMedia
+                    className="projectImage"
+                    component="img"
+                    alt="Trivia Weekend"
+                    image="https://i.imgur.com/WV7Hdc5.png"
+                    title="Trivia Weekend"
+                    style={{ height: 375 }}
+                  />
+                </Button>
+              </Card>
+            </Grid>
+            <Grid item sm={1}>
+            </Grid>
+
           </Grid>
         </div>
       </ThemeProvider>
